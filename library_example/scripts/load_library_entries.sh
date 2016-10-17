@@ -6,6 +6,6 @@
 
 echo Loading sample data into Library index....
 
-curl -XPOST 'http://localhost:9200/library/books/_bulk' --data-binary @../data/library_entries.json
+curl -XPOST 'http://localhost:9200/_bulk' --data-binary @../data/library_entries.json
 
 echo 

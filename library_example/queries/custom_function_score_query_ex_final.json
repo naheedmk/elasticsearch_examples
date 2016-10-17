@@ -1,0 +1,27 @@
+{
+  "from": 0,
+  "size": 10,
+  "query": {
+    "function_score": {
+      "query": {
+        "bool": {
+          "must": [
+            {
+              "match": {
+                "title": "world"
+              }
+            }
+          ]
+        }
+      },
+      "functions": [
+        {
+          "script_score": {
+            "script": "(doc['pub_year'].value / 1000) * 2"
+          }
+        }
+      ],
+      "boost_mode": "replace"
+    }
+  }
+}

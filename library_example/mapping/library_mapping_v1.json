@@ -1,0 +1,30 @@
+{
+   "mappings": {
+      "books": {
+         "properties": {
+            "isbn13" : {
+                "type": "string",
+                "index": "not_analyzed"
+            },
+            "categories": {
+               "type": "string"
+            },
+            "title" : {
+                "type" : "string"
+            },
+            "publisher" : {
+                "type" : "string"
+            },
+            "pub_year" : { 
+                "type" : "integer"
+            },
+            "authors" : {
+                "type" : "string"
+            },
+            "abstract" : {
+                "type" : "string"
+            }
+         }
+      }
+   }
+}
